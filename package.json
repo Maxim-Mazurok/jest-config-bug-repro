@@ -1,0 +1,15 @@
+{
+  "name": "jest-config-bug-repro",
+  "type": "module",
+  "scripts": {
+    "jest": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:integration": "npm run jest -- --config jest.integration.config.ts",
+    "test:unit": "npm run jest",
+    "test": "npm run test:unit && npm run test:integration"
+  },
+  "dependencies": {
+    "jest": "^29.1.2",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1"
+  }
+}
